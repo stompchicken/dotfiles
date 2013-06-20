@@ -1,0 +1,11 @@
+[user]
+    name = Stephen Spencer
+    email = steve@stompchicken.com
+[color]
+    ui = auto
+[core]
+    editor = emacs
+[push]
+	default = current
+[alias]
+	lg = log --color --graph \n  --pretty=format:'%Cred%h%Creset \n  -%C(yellow)%d%Creset %s %Cgreen(%cr) \n  %C(bold blue)<%an>%Creset' \n  --abbrev-commit
