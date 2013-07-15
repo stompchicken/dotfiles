@@ -1,1 +1,1 @@
-⚡ Coolest prompt ever.
+Coolest prompt ever.
