@@ -32,3 +32,19 @@
 ;; Switch between hpp and cpp
 (global-set-key (kbd "C-c TAB") 'ff-find-other-file)
 (global-set-key (kbd "<f10>") 'recompile)
+
+;; Pretty-print a screwed up JSON file
+(defun beautify-json ()
+  (interactive)
+  (let ((b (if mark-active (min (point) (mark)) (point-min)))
+        (e (if mark-active (max (point) (mark)) (point-max))))
+    (shell-command-on-region b e "python -mjson.tool" (current-buffer) t)))
+
+;; Handle coloured output in compile buffer
+;; (Mainly for Catch errors)
+(require 'ansi-color)
+(defun colorize-compilation-buffer ()
+  (toggle-read-only)
+  (ansi-color-apply-on-region (point-min) (point-max))
+  (toggle-read-only))
+(add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
