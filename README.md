@@ -1,1 +1,0 @@
-Coolest prompt ever.
