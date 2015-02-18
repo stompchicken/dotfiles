@@ -9,8 +9,8 @@
 
 ; Package management
 (require 'package)
-(add-to-list 'package-archives
-	     '("marmalade" . "http://marmalade-repo.org/packages/") t)
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
 ;; Scrolling behaviour
@@ -31,6 +31,13 @@
 ;; Whitespace mode
 (setq whitespace-line-column 120)
 (global-whitespace-mode 1)
+
+;; Speedbar
+(require 'sr-speedbar)
+(setq sr-speedbar-right-side nil)
+(setq sr-speedbar-width-console 80)
+(global-set-key (kbd "<f12>") 'sr-speedbar-toggle)
+(setq speedbar-show-unknown-files t)
 
 ;; C++ stuff
 (setq-default indent-tabs-mode nil)
