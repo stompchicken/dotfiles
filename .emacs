@@ -51,9 +51,9 @@
 ;;  (windmove-default-keybindings))
 
 ;; Whitespace mode
-;; (setq whitespace-line-column 80)
-;; Disabled until I can figure out a sane config
-;;(global-whitespace-mode 1)
+(global-whitespace-mode 1)
+(setq whitespace-line-column 80)
+(setq whitespace-style '(face trailing lines-tail empty))
 
 ;; All kinds of ido
 (require 'ido-ubiquitous)
