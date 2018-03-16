@@ -53,7 +53,7 @@
 ;; Whitespace mode
 (global-whitespace-mode 1)
 (setq whitespace-line-column 80)
-(setq whitespace-style '(face trailing lines-tail empty))
+(setq whitespace-style '(face trailing empty))
 
 ;; All kinds of ido
 (require 'ido-ubiquitous)
@@ -151,6 +151,12 @@
 (define-key ggtags-mode-map (kbd "C-c g c") 'ggtags-create-tags)
 (define-key ggtags-mode-map (kbd "C-c g u") 'ggtags-update-tags)
 (define-key ggtags-mode-map (kbd "M-,") 'pop-tag-mark)
+
+;; org mode
+(require 'org)
+
+;; python
+(elpy-enable)
 
 ;; Spellcheck in markdown mode
 (add-hook 'markdown-mode-hook 'flyspell-mode)
