@@ -160,3 +160,6 @@
 
 ;; Spellcheck in markdown mode
 (add-hook 'markdown-mode-hook 'flyspell-mode)
+
+;; Long lines in markdown mode
+(add-hook 'markdown-mode-hook (lambda () (set-fill-column 120)))
