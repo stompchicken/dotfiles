@@ -1,0 +1,15 @@
+NO_COLOUR="\[\033[0m\]"
+GREY="\[\033[1;30m\]"
+
+PROMPT_SUCCESS="⚡"
+PROMPT_FAILURE="☠"
+
+export PS1="$GREY\w$NO_COLOUR \$(exit=\$?; if [[ \$exit == 0 ]]; then echo $PROMPT_SUCCESS; else echo $PROMPT_FAILURE; fi)  "
+
+# Emacs stuff
+export ALTERNATE_EDITOR=""
+
+# Autocomplete git
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
